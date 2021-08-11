@@ -12,6 +12,7 @@
 
     --head-Text-Main-Color:#fff;
     --head-Text-Second-Color:#f69314;
+    --head-Text-Third-Color:#999;
 
     --icon-Color:#f69314;
     --social-Icon-Main-Color:#777;
@@ -66,6 +67,16 @@ ul li a:hover {
     text-decoration: none;
 }
 
+.head-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.head-title h2 {
+    color: var(--head-Text-Second-Color);
+    font-weight: 700;
+}
+
 /* ******* Navbar ******* */
 
 #Navbar {
@@ -76,6 +87,7 @@ ul li a:hover {
     z-index: 9999;
     transition: background-color 1500ms;
     border-bottom: 1px solid #777;
+    box-shadow: 0px 0px 8px #777;
 }
 
 #Navbar .container {
@@ -96,15 +108,16 @@ ul li a:hover {
     flex-direction: row;
 }
 
-.logoSide .logoText a {
-    text-decoration: none;
+.logoSide .logoText h1 {
+    margin: 0;
 }
 
-.logoSide .logoText a h1 {
-    font-size: 28px;
-    font-weight: 700;
-    margin: 0;
+.logoSide .logoText h1 a {
+    text-decoration: none;
     color: var(--logo-Color);
+    font-weight: 700;
+    font-size: 28px;
+
 }
 
 .container .logoSide .burgerBTN {
@@ -299,7 +312,7 @@ ul li a:hover {
     }
 }
 
-/* ////////////// */
+/* /////// Test /////// */
 #Properties,#News,#Agents,#Contact {
     height: 1000px;
     width: 100%;
@@ -320,3 +333,105 @@ ul li a:hover {
 #Contact {
     background-color: crimson;
 }
+/* ////////////// */
+
+/* ******* How-It-Works ******* */
+
+#How-It-Works {
+    background-color: var(--btn-Bg-Hovor-Color);
+    padding: 4rem 0;
+}
+
+#How-It-Works .container .row .cards {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.cards i {
+    font-size: 35px;
+    margin-bottom: 1rem;
+    color: var(--icon-Color);
+}
+
+.cards h5 {
+    font-weight: 400;
+    color: var(--card-Main-Title-Color);
+}
+
+.cards p {
+    margin: 0;
+    color: var(--head-Text-Third-Color);
+}
+
+@media screen and (max-width: 575px) {
+    #How-It-Works .container .row .cards {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* *******  ******* */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ******* Services ******* */
+
+#Services {
+    background-color: var(--btn-Bg-Hovor-Color);
+    padding: 4rem 0;
+}
+
+#Services .container .row .cards {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+#Services .container .row .cards .icons{
+    padding: 1rem 0rem;
+    margin: 0 1rem 0 0;
+}
+
+#Services .container .row .cards .text {
+    text-align: left;
+}
+
+.cards .icons i {
+    margin: 0;
+    font-size: 35px;
+    color: var(--icon-Color);
+}
+
+.cards .text h5 {
+    font-weight: 400;
+    color: var(--card-Main-Title-Color);
+    margin-bottom: .5rem;
+}
+
+.cards p {
+    color: var(--head-Text-Third-Color);
+    margin-bottom: .5rem;
+}
+
+.cards a {
+    color: var(--head-Text-Second-Color);
+}
+
+@media screen and (max-width: 575px) {
+    #Services .container .row .cards {
+        padding: 1.5rem 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* *******  ******* */

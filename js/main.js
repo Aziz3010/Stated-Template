@@ -19,7 +19,7 @@ $(window).scroll(function(){
         // navbar
         $("#Navbar").css("background","#fff");
         // logo text
-        $(".logoText h1").css("color","#999");
+        $(".logoText h1 a").css("color","#999");
         // burgerBTN
         $(".burgerBTN span").css("background","#999");
         // hover on links
@@ -29,7 +29,7 @@ $(window).scroll(function(){
         // navbar
         $("#Navbar").css("background","#f1f1f118");
         // logo text
-        $(".logoText h1").css("color","#fff");
+        $(".logoText h1 a").css("color","#fff");
         // burgerBTN
         $(".burgerBTN span").css("background","#f1f1f1");
         
@@ -51,7 +51,7 @@ function changeColorHoverOnLink(){
 
 
 // go to sections smoothly when click in link
-$("#Navbar .links ul li a").click(function(e){
+$("#Navbar .links ul li a,#Navbar .logoText a").click(function(e){
     let currentSection = $(e.target).attr("href");
     let sectionOffset = $(`${currentSection}`).offset().top;
     $("body , html").animate({scrollTop:sectionOffset},1500);
