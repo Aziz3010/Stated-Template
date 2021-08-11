@@ -491,15 +491,20 @@ ul li a:hover {
 }
 
 #We-Are .mainBox .infos-side .ul-we-are {
+    width: 100%;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
     margin-bottom: 2.5rem;
 }
 
 #We-Are .mainBox .infos-side .ul-we-are li {
-    list-style: inside;
-    margin: 0;
     color: var(--head-Text-Third-Color);
+    list-style: inside;
+    text-align: left;
+    width: 100%;
+    margin: 0 0 .5rem 0;
 }
 
 #We-Are .mainBox .infos-side .btn {
