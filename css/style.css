@@ -34,7 +34,6 @@
 
 body {
     background-color: var(--body-Bg-Main-Color);
-    height: 10000px;
 }
 
 ul {
@@ -313,7 +312,7 @@ ul li a:hover {
 }
 
 /* /////// Test /////// */
-#Properties,#News,#Agents,#Contact {
+#Properties,#News,#Contact {
     height: 1000px;
     width: 100%;
 }
@@ -324,10 +323,6 @@ ul li a:hover {
 
 #News{
     background-color: cornflowerblue;
-}
-
-#Agents {
-    background-color: red;
 }
 
 #Contact {
@@ -369,18 +364,221 @@ ul li a:hover {
     }
 }
 
-/* *******  ******* */
+/* ******* Agents ******* */
+
+#Agents {
+    padding: 4rem 1.5rem;
+    border-bottom: 2px solid #777;
+}
+
+#Agents .head {
+    margin-bottom: 3rem;
+}
+
+#Agents .head h2 {
+    color: var(--head-Text-Second-Color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#Agents .head p {
+    color: var(--head-Text-Third-Color);
+}
+
+#Agents .persons {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#Agents .persons .person {
+    background-color: var(--card-Bg-Color);
+    margin-bottom: 1rem;
+    width: 32%;
+}
+
+.persons .person .image {
+    overflow: hidden;
+}
+
+.persons .person .image img {
+    width: 100%;
+    transition: transform 500ms;
+}
+
+.persons .person .image img:hover {
+    transform: scale(105%) rotate(1deg);
+}
 
 
+#Agents .persons .captions {
+    padding: 1rem .5rem;
+}
+
+#Agents .persons .captions h5 {
+    color: var(--card-Main-Title-Color);
+    margin-bottom: .5rem;
+}
+
+#Agents .persons .captions p {
+    color: var(--head-Text-Third-Color);
+    margin: 0;
+}
 
 
+@media screen and (max-width: 767px) {
+    #Agents .persons .person {
+        width: 49%;
+    }
+}
 
+@media screen and (max-width: 420px) {
+    #Agents .persons .person {
+        width: 100%;
+    }
+}
 
+/* ******* We Are ******* */
 
+#We-Are {
+    padding: 4rem 2rem;
+}
 
+#We-Are .mainBox {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
 
+#We-Are .mainBox .image-side {
+    width: 49%;
+    padding: 2rem;
+}
 
+#We-Are .mainBox .image-side img {
+    width: 100%;
+}
 
+#We-Are .mainBox .infos-side {
+    width: 49%;
+    padding: 2rem;
+}
+
+#We-Are .mainBox .infos-side h2 {
+    color: var(--head-Text-Second-Color);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+#We-Are .mainBox .infos-side p:nth-child(2) {
+    margin-bottom: 1rem;
+    color: var(--head-Text-Third-Color);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#We-Are .mainBox .infos-side p:nth-child(3) {
+    margin-bottom: 2.5rem;
+    color: var(--head-Text-Third-Color);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#We-Are .mainBox .infos-side .ul-we-are {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+#We-Are .mainBox .infos-side .ul-we-are li {
+    list-style: inside;
+    margin: 0;
+    color: var(--head-Text-Third-Color);
+}
+
+#We-Are .mainBox .infos-side .btn {
+    background-color: var(--btn-Bg-Main-Color);
+    border-radius: 50px;
+    padding: .3rem .7rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+@media screen and (max-width: 1065px) {
+    #We-Are .mainBox .image-side {
+        padding: 1rem;
+    }
+ 
+    #We-Are .mainBox .infos-side {
+        padding: 1rem;
+    }
+    
+    #We-Are .mainBox .infos-side h2 {
+        margin-bottom: 1rem;
+    }
+    
+    #We-Are .mainBox .infos-side p:nth-child(2) {
+        margin-bottom: 1rem;
+    }
+    
+    #We-Are .mainBox .infos-side p:nth-child(3) {
+        margin-bottom: 1.5rem;
+    }
+    
+    #We-Are .mainBox .infos-side .ul-we-are {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    #We-Are .mainBox .image-side {
+        padding: 0rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #We-Are .mainBox {
+        padding: 1rem;
+    }
+    
+    #We-Are .mainBox .image-side {
+        width: 49%;
+    }
+    
+    #We-Are .mainBox .infos-side {
+        width: 49%;
+        padding: 0rem;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    #We-Are .mainBox {
+        padding: 0rem;
+    }
+
+}
+
+@media screen and (max-width: 738px) {
+    #We-Are .mainBox {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    #We-Are .mainBox .image-side {
+        margin-bottom: 1.8rem;
+        width: 80%;
+    }
+
+    #We-Are .mainBox .infos-side {
+        width: 80%;      
+    }
+}
 
 /* ******* Services ******* */
 
