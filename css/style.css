@@ -636,10 +636,6 @@ ul li a:hover {
 
 /* *******  ******* */
 
-
-
-
-
 /* ******* Contact Us  ******* */
 
 #Contact {
@@ -714,4 +710,182 @@ ul li a:hover {
     }
 }
 
+/* ******* Footer ******* */
 
+footer {
+    background-color: #212529;
+    padding: 4rem 0;
+}
+
+footer .row {
+    border-bottom: 1px solid #777;
+    padding-bottom: 5rem;
+    margin-bottom: 4rem;
+}
+
+footer .row h5 {
+    color: #fff;
+    margin-bottom: .6rem;
+}
+
+/* box 1 */
+
+footer .row .About-Stated {
+    padding: 1rem;
+    text-align: left;
+}
+
+footer .row .About-Stated p {
+    color: var(--head-Text-Third-Color);
+}
+
+/* box 2 */
+
+footer .row .Quick-Links {
+    padding: 1rem;
+}
+
+footer .row .Quick-Links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+footer .row .Quick-Links ul li {
+    margin: 0;
+}
+
+footer .row .Quick-Links ul li a {
+    color: var(--head-Text-Third-Color);
+    margin-bottom: .8rem;
+    text-align: left;
+    padding: 0;
+    transition: color 500ms;
+}
+
+footer .row .Quick-Links ul li a:hover {
+    color: var(--social-Icon-Main-Color);
+}
+
+footer .row .Quick-Links ul li:last-child a {
+    margin-bottom: 0rem;
+}
+
+/* box 3 */
+
+footer .row .Subscribe {
+    padding: 1rem;
+}
+
+footer .row .Subscribe .inputBox {
+    margin: 1.5rem 0 2.5rem 0;
+    border-radius: 30px;
+    position: relative;
+    width: 85%;
+}
+
+footer .row .Subscribe .inputBox input {
+    outline: none;
+    border: none;
+}
+
+footer .row .Subscribe .inputBox input:first-child {
+    background-color: transparent;
+    padding: .5rem 0 .5rem 1rem;
+    border: 1px solid #777;
+    border-radius: 30px;
+    color: #fff;
+    width: 100%;
+}
+
+footer .row .Subscribe .inputBox input:last-child {
+    background-color: var(--btn-Bg-Main-Color);
+    border-radius: 0px 30px 30px 0;
+    padding: 0rem 1.4rem;
+    color: #000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Follow Us */
+
+footer .row .Subscribe ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+footer .row .Subscribe ul li {
+    margin: .5rem 1rem 0 0;
+    width: fit-content;
+}
+
+footer .row .Subscribe ul li:last-child {
+    margin-right: 0rem;
+}
+
+footer .row .Subscribe ul li a {
+    color: var(--head-Text-Third-Color);
+    text-align: left;
+    font-size: 23px;
+    padding: 0;
+    transition: color 500ms;
+    width: fit-content;
+
+}
+
+footer .row .Subscribe ul li a:hover {
+    color: var(--social-Icon-Main-Color);
+}
+
+footer .row .Subscribe ul li:last-child a {
+    margin-bottom: 0rem;
+
+}
+
+@media screen and (max-width: 767px) {
+    footer .row .About-Stated {
+        margin-bottom: 1rem;
+    }
+    footer .row .Quick-Links {
+        margin-bottom: 1rem;
+    }
+}
+
+/* right */
+
+footer .copyright {
+    text-align: center;
+    color: var(--head-Text-Third-Color);
+}
+
+footer .copyright i {
+    color: red;
+    animation-name: heart;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    0% {
+        font-size: 100%;
+    }
+    25% {
+        font-size: 95%;
+    }
+    50% {
+        font-size: 90%;
+    }
+    75% {
+        font-size: 95%;
+    }
+    100% {
+        font-size: 100%;
+    }
+}
