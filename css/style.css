@@ -312,7 +312,7 @@ ul li a:hover {
 }
 
 /* /////// Test /////// */
-#Properties,#News,#Contact {
+#Properties,#News {
     height: 1000px;
     width: 100%;
 }
@@ -325,9 +325,6 @@ ul li a:hover {
     background-color: cornflowerblue;
 }
 
-#Contact {
-    background-color: crimson;
-}
 /* ////////////// */
 
 /* ******* How-It-Works ******* */
@@ -638,3 +635,83 @@ ul li a:hover {
 }
 
 /* *******  ******* */
+
+
+
+
+
+/* ******* Contact Us  ******* */
+
+#Contact {
+    background-color: var(--body-Bg-Second-Color);
+    padding: 4rem 0;
+}
+
+/* form */
+
+#Contact .container .row .formBox {
+    background-color: #fff;
+    padding: 2rem;
+}
+
+#Contact .container .row .formBox h4 {
+    margin-bottom: 2rem;
+}
+
+#Contact .container .row .formBox form label {
+    color: var(--head-Text-Third-Color);
+}
+
+#Contact .container .row .formBox form .form-control {
+    border-radius: 15px;
+}
+
+#Contact .container .row .formBox form textarea {
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+#Contact .container .row .formBox form .btn {
+    background-color: var(--btn-Bg-Main-Color);
+    border-radius: 50px;
+    padding: .3rem .7rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* address */
+
+#Contact .container .row .addressBox {
+    background-color: #fff;
+    padding: 2rem;
+}
+
+#Contact .container .row .addressBox h6 {
+    color: #999;
+    font-weight: 700;
+    margin-bottom: .4rem;
+}
+
+#Contact .container .row .addressBox p {
+    color: #999;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#Contact .container .row .addressBox a {
+    color: var(--nav-Anchor-Active-Hover-Color_Scroll);
+    display: block;
+    font-weight: 600;
+}
+
+#Contact .container .row .addressBox a:nth-child(4) {
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    #Contact .container .row .addressBox {
+        margin-top: 2rem;
+    }
+}
+
+
