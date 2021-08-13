@@ -49,7 +49,6 @@ function changeColorHoverOnLink(){
 
 }
 
-
 // go to sections smoothly when click in link
 $("#Navbar .links ul li a,#Navbar .logoText a").click(function(e){
     let currentSection = $(e.target).attr("href");
@@ -58,3 +57,33 @@ $("#Navbar .links ul li a,#Navbar .logoText a").click(function(e){
 });
 
 
+// testimonials
+
+var newsBox = document.getElementById("newsBox");
+var control1 = document.getElementById("control1");
+var control2 = document.getElementById("control2");
+var control3 = document.getElementById("control3");
+
+
+control1.addEventListener("click",function(){
+    newsBox.style.transform = "translateX(800px)";
+    control1.classList.add("active");
+    control2.classList.remove("active");
+    control3.classList.remove("active");
+});
+
+control2.addEventListener("click",function(){
+    newsBox.style.transform = "translateX(0px)";
+    control1.classList.remove("active");
+    control2.classList.add("active");
+    control3.classList.remove("active");
+});
+
+control3.addEventListener("click",function(){
+    newsBox.style.transform = "translateX(-800px)";
+    control1.classList.remove("active");
+    control2.classList.remove("active");
+    control3.classList.add("active");
+});
+
+// ////////////////////
