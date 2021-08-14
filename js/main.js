@@ -56,7 +56,6 @@ $("#Navbar .links ul li a,#Navbar .logoText a").click(function(e){
     $("body , html").animate({scrollTop:sectionOffset},1500);
 });
 
-
 // testimonials
 
 var newsBox = document.getElementById("newsBox");
@@ -86,4 +85,120 @@ control3.addEventListener("click",function(){
     control3.classList.add("active");
 });
 
+
+
+
+
+
+
+
+
+
 // ////////////////////
+
+// slider
+
+var sliderImages = Array.from(document.querySelectorAll(".slider-container img"));
+var getImagerNumber = sliderImages.length;
+var currentSlide = 5;
+var slide_Number_Box = document.getElementById("slide-number");
+
+var PreviousBTN = document.getElementById("prev");
+var NextBTN = document.getElementById("next");
+
+
+PreviousBTN.addEventListener("click",function(){
+    PrevSlide();
+})
+
+
+NextBTN.addEventListener("click",function(){
+    nextSlide();
+})
+
+
+function nextSlide(){
+    if(NextBTN.classList.contains("disabled")){
+        return false;
+    } else{
+        currentSlide++;
+        console.log(currentSlide);
+        checker()
+    }
+}
+
+function PrevSlide(){
+    if(PreviousBTN.classList.contains("disabled")){
+        return false;
+    } else{
+        currentSlide--;
+        console.log(currentSlide);
+        checker()
+    }
+}
+
+// create ul + li
+
+var paginationElement = document.createElement("ul");
+paginationElement.setAttribute("id","pagination-ul");
+
+for (var i=0 ; i<getImagerNumber ; i++){
+    var listsElements = document.createElement("li");
+    
+    listsElements.setAttribute("data-index", i);
+
+    listsElements.appendChild(document.createTextNode(i+1));
+
+    paginationElement.appendChild(listsElements);
+
+}
+
+var indicators = document.getElementById("indicators");
+indicators.appendChild(paginationElement);
+
+var paginationCreatedUl = document.getElementById("pagination-ul");
+var paginationArray = Array.from(document.querySelectorAll("#pagination-ul li"));
+
+
+for(var i=0 ; i<getImagerNumber ; i++){
+    paginationArray[i].addEventListener("click",function(){
+        currentSlide = parseInt(this.getAttribute("data-index")) + 1;
+        checker()
+    })
+}
+
+function checker(){
+    slide_Number_Box.textContent = `Silde #${currentSlide} of ${getImagerNumber}`;
+
+    removeActives()
+
+    sliderImages[currentSlide - 1].classList.add("active");
+    
+    paginationCreatedUl.children[currentSlide - 1].classList.add("active");
+
+
+    if(currentSlide == 1){
+        PreviousBTN.classList.add("disabled");
+    } else  {
+        PreviousBTN.classList.remove("disabled");
+    }
+
+    if(currentSlide == getImagerNumber ){
+        NextBTN.classList.add("disabled");
+    } else  {
+        NextBTN.classList.remove("disabled");
+    }
+
+}
+checker()
+
+function removeActives(){
+    sliderImages.forEach(function(images){
+        images.classList.remove("active");
+    })
+
+    paginationArray.forEach(function(lists){
+        lists.classList.remove("active");
+    })
+}
+// ////////////////////////////////////////////////
